@@ -3,82 +3,152 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile Demos</title>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	<title>Rangeslider - jQuery Mobile Demos</title>
+	<link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<script src="js/jquery.js"></script>
-	<script src="_assets/js/index.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page" class="jqm-demos jqm-home">
+<div data-role="page" class="jqm-demos" data-quicklinks="true">
 
 	<div data-role="header" class="jqm-header">
-		<h2><img src="_assets/img/jquery-logo.png" alt="jQuery Mobile"></h2>
-		<p>Version <span class="jqm-version"></span></p>
+		<h2><a href="../" title="jQuery Mobile Demos home"><img src="../_assets/img/jquery-logo.png" alt="jQuery Mobile"></a></h2>
+		<p><span class="jqm-version"></span> Demos</p>
 		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content jqm-content">
 
-		<h1>Demos</h1>
+		<h1>Range slider</h1>
 
-		<p><strong>jQuery Mobile is a touch-optimized HTML5 UI framework designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</strong></p>
+		<p>Range slider offer two handles to set a min and max value along a numeric continuum.
+			</p>
 
-		<img src="_assets/img/devices.png">
+                <h2>Basic range slider</h2>
 
-		<p>New to jQuery Mobile? Get started by reading this <a href="intro/" data-ajax="false">introduction</a>. For technical info, visit the <a href="http://api.jquerymobile.com" title="jQuery Mobile API documentation" target="_blank">API documentation</a>. Downloads and info about the project can be found on <a href="http://jquerymobile.com" title="jQuery Mobile web site" target="_blank">jquerymobile.com</a>.</p>
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider">
+                        <label for="range-1a">Rangeslider:</label>
+                        <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40">
+                        <label for="range-1b">Rangeslider:</label>
+                        <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
 
-        <div class="ui-grid-a ui-responsive">
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Pages &amp; Navigation</h3>
+                <h2>Step attribute</h2>
 
-        			<p><a href="pages/" data-ajax="false">Pages</a></p>
-        			<p><a href="navigation/" data-ajax="false">Navigation</a></p>
-        			<p><a href="loader/" data-ajax="false">Loader</a></p>
-        			<p><a href="transitions/" data-ajax="false">Transitions</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>CSS Framework</h3>
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider">
+                        <label for="range-10a">Rangeslider:</label>
+                        <input type="range" name="range-10a" id="range-10a" min="0" max="10" step=".1" value="2.6">
+                        <label for="range-10b">Rangeslider:</label>
+                        <input type="range" name="range-10b" id="range-10b" min="0" max="10" step=".1" value="5.4">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
 
-        			<p><a href="theme-default/" data-ajax="false">Theming</a></p>
-        			<p><a href="button-markup/" data-ajax="false">Buttons</a></p>
-        			<p><a href="icons/" data-ajax="false">Icons</a></p>
-        			<p><a href="grids/" data-ajax="false">Grids</a></p>
-        			<p><a href="../body-bar-classes/" data-ajax="false">Body and bar classes</a></p>
-        		</div>
-        	</div>        	
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Widgets</h3>
+                <h2>No highlight</h2>
 
-        			<p><a href="toolbar/" data-ajax="false">Toolbar</a>, <a href="navbar/" data-ajax="false">Navbar</a></p>
-        			<p><a href="tabs/" data-ajax="false">Tabs</a>, <a href="panel/" data-ajax="false">Panel</a>, <a href="popup/" data-ajax="false">Popup</a></p>
-        			<p><a href="listview/" data-ajax="false">Listview</a></p>
-        			<p><a href="collapsible/" data-ajax="false">Collapsible</a>, <a href="collapsibleset/" data-ajax="false">Collapsible set</a></p>
-        			<p><a href="table-reflow/" data-ajax="false">Table Reflow</a>, <a href="table-column-toggle/" data-ajax="false">Table Column Toggle</a></p>
-        			<p><a href="filterable/" data-ajax="false">Filterable</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>Form widgets</h3>
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider" data-highlight="false">
+                        <label for="range-2a">Rangeslider (default is "true"):</label>
+                        <input type="range" name="range-2a" id="range-2a" min="0" max="100" value="20">
+                        <label for="range-2b">Rangeslider:</label>
+                        <input type="range" name="range-2b" id="range-2b" min="0" max="100" value="80">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
 
-        			<p><a href="checkboxradio-checkbox/" data-ajax="false">Checkboxes</a>, <a href="checkboxradio-radio/" data-ajax="false">Radio buttons</a></p>
-        			<p><a href="selectmenu/" data-ajax="false">Selectmenu</a>, <a href="selectmenu-custom/" data-ajax="false">Custom menu</a></p>
-        			<p><a href="flipswitch/" data-ajax="false">Flipswitch</a></p>
-        			<p><a href="slider/" data-ajax="false">Slider</a>, <a href="rangeslider/" data-ajax="false">Rangeslider</a></p>
-        			<p><a href="button/" data-ajax="false">Input button</a></p>
-        			<p><a href="controlgroup/" data-ajax="false">Controlgroup</a></p>
-        		</div>
-        	</div>
-        </div>
+                <h2>Theme</h2>
+
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider" data-track-theme="b" data-theme="a">
+                        <label for="range-3a">Rangeslider:</label>
+                        <input type="range" name="range-3a" id="range-3a" min="0" max="100" value="20">
+                        <label for="range-3b">Rangeslider:</label>
+                        <input type="range" name="range-3b" id="range-3b" min="0" max="100" value="100">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
+
+                <h2>Mini</h2>
+
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider" data-mini="true">
+                        <label for="range-4a">Rangeslider:</label>
+                        <input type="range" name="range-4a" id="range-4a" min="0" max="100" value="0">
+                        <label for="range-4b">Rangeslider:</label>
+                        <input type="range" name="range-4b" id="range-4b" min="0" max="100" value="100">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
+
+                <h2>Disabled</h2>
+
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider">
+                        <label for="range-5a">Rangeslider:</label>
+                        <input type="range" name="range-5a" id="range-5a" disabled="disabled" min="0" max="100" value="0">
+                        <label for="range-5b">Rangeslider:</label>
+                        <input type="range" name="range-5b" id="range-5b" disabled="disabled" min="0" max="100" value="100">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
+
+                <h2>Label hidden</h2>
+
+                <div data-demo-html="true">
+				<form>
+                    <div data-role="rangeslider">
+                        <label for="range-6a" class="ui-hidden-accessible">Rangeslider:</label>
+                        <input type="range" name="range-6a" id="range-6a" min="0" max="100" value="0">
+                        <label for="range-6b">Rangeslider:</label>
+                        <input type="range" name="range-6b" id="range-6b" min="0" max="100" value="100">
+                    </div>
+				</form>
+                </div><!-- /demo-html -->
+
+                <h2>Fieldcontain</h2>
+
+                <div data-demo-html="true">
+				<form>
+					<div class="ui-field-contain">
+                        <div data-role="rangeslider">
+                            <label for="range-7a">Rangeslider:</label>
+                            <input type="range" name="range-7a" id="range-7a" min="0" max="100" value="0">
+                            <label for="range-7b">Rangeslider:</label>
+                            <input type="range" name="range-7b" id="range-7b" min="0" max="100" value="100">
+                        </div>
+					</div>
+				</form>
+                </div><!-- /demo-html -->
+
+                <h2>Fieldcontain, mini</h2>
+
+                <div data-demo-html="true">
+				<form>
+					<div class="ui-field-contain">
+                        <div data-role="rangeslider" data-mini="true">
+                            <label for="range-8a">Rangeslider:</label>
+                            <input type="range" name="range-8a" id="range-8a" min="0" max="100" value="0">
+                            <label for="range-8b">Rangeslider:</label>
+                            <input type="range" name="range-8b" id="range-8b" min="0" max="100" value="100">
+                        </div>
+					</div>
+				</form>
+                </div><!-- /demo-html -->
 
 	</div><!-- /content -->
 	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">

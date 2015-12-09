@@ -3,81 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile Demos</title>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<script src="js/jquery.js"></script>
-	<script src="_assets/js/index.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<title>Swipe to navigate - jQuery Mobile Demos</title>
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+	<link rel="stylesheet" href="swipe-page.css" id="demo-style">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="swipe-page.js" id="demo-script"></script>
+	<style>
+		#_header, #_footer {
+			display: none;
+		}
+	</style>
 </head>
 <body>
-<div data-role="page" class="jqm-demos jqm-home">
 
-	<div data-role="header" class="jqm-header">
-		<h2><img src="_assets/img/jquery-logo.png" alt="jQuery Mobile"></h2>
-		<p>Version <span class="jqm-version"></span></p>
-		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
-	</div><!-- /header -->
+<div data-role="page" class="jqm-demos">
 
-	<div role="main" class="ui-content jqm-content">
+    <div data-role="header" class="jqm-header">
+        <h2><a href="../" title="jQuery Mobile Demos home"><img src="../_assets/img/jquery-logo.png" alt="jQuery Mobile"></a></h2>
+		<p><span class="jqm-version"></span> Demos</p>
+        <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+        <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+    </div><!-- /header -->
 
-		<h1>Demos</h1>
+    <div role="main" class="ui-content jqm-content">
 
-		<p><strong>jQuery Mobile is a touch-optimized HTML5 UI framework designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</strong></p>
+        <h1>Swipe to navigate</h1>
 
-		<img src="_assets/img/devices.png">
+        <div data-demo-html="#city" data-demo-js="#demo-script" data-demo-css="#demo-style">
+            <p>This demo shows how you can use the swipe event to navigate between pages. We are using single HTML files for each page. Here you can see the JavaScript and CSS source. On each of the demo pages you can see the page markup as well.</p>
 
-		<p>New to jQuery Mobile? Get started by reading this <a href="intro/" data-ajax="false">introduction</a>. For technical info, visit the <a href="http://api.jquerymobile.com" title="jQuery Mobile API documentation" target="_blank">API documentation</a>. Downloads and info about the project can be found on <a href="http://jquerymobile.com" title="jQuery Mobile web site" target="_blank">jquerymobile.com</a>.</p>
-
-        <div class="ui-grid-a ui-responsive">
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Pages &amp; Navigation</h3>
-
-        			<p><a href="pages/" data-ajax="false">Pages</a></p>
-        			<p><a href="navigation/" data-ajax="false">Navigation</a></p>
-        			<p><a href="loader/" data-ajax="false">Loader</a></p>
-        			<p><a href="transitions/" data-ajax="false">Transitions</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>CSS Framework</h3>
-
-        			<p><a href="theme-default/" data-ajax="false">Theming</a></p>
-        			<p><a href="button-markup/" data-ajax="false">Buttons</a></p>
-        			<p><a href="icons/" data-ajax="false">Icons</a></p>
-        			<p><a href="grids/" data-ajax="false">Grids</a></p>
-        			<p><a href="../body-bar-classes/" data-ajax="false">Body and bar classes</a></p>
-        		</div>
-        	</div>        	
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Widgets</h3>
-
-        			<p><a href="toolbar/" data-ajax="false">Toolbar</a>, <a href="navbar/" data-ajax="false">Navbar</a></p>
-        			<p><a href="tabs/" data-ajax="false">Tabs</a>, <a href="panel/" data-ajax="false">Panel</a>, <a href="popup/" data-ajax="false">Popup</a></p>
-        			<p><a href="listview/" data-ajax="false">Listview</a></p>
-        			<p><a href="collapsible/" data-ajax="false">Collapsible</a>, <a href="collapsibleset/" data-ajax="false">Collapsible set</a></p>
-        			<p><a href="table-reflow/" data-ajax="false">Table Reflow</a>, <a href="table-column-toggle/" data-ajax="false">Table Column Toggle</a></p>
-        			<p><a href="filterable/" data-ajax="false">Filterable</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>Form widgets</h3>
-
-        			<p><a href="checkboxradio-checkbox/" data-ajax="false">Checkboxes</a>, <a href="checkboxradio-radio/" data-ajax="false">Radio buttons</a></p>
-        			<p><a href="selectmenu/" data-ajax="false">Selectmenu</a>, <a href="selectmenu-custom/" data-ajax="false">Custom menu</a></p>
-        			<p><a href="flipswitch/" data-ajax="false">Flipswitch</a></p>
-        			<p><a href="slider/" data-ajax="false">Slider</a>, <a href="rangeslider/" data-ajax="false">Rangeslider</a></p>
-        			<p><a href="button/" data-ajax="false">Input button</a></p>
-        			<p><a href="controlgroup/" data-ajax="false">Controlgroup</a></p>
-        		</div>
-        	</div>
+            <p><a href="newyork.html" data-ajax="false" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Open swipe page demo</a></p>
         </div>
 
 	</div><!-- /content -->
@@ -691,6 +651,39 @@
 
 
 </div><!-- /page -->
+
+<!-- The markup below is a copy of the actual demo pages just so we can show the markup in the "view source" -->
+
+<!-- "city", "prevCity" and "nextCity" are used as placeholders and contain the name of the applicable city in our demo files. -->
+
+<!-- The ID's of the header and footer are prefixed here with "_" to prevent the external toolbars to show up on our intro page. -->
+
+<div id="_header" data-role="header" data-id="header" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
+	<h1>City</h1>
+    <a href="./" data-direction="reverse" data-icon="delete" data-iconpos="notext" data-shadow="false" data-icon-shadow="false">Back</a>
+</div><!-- /header -->
+
+<div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="prevCity" data-next="nextCity">
+
+	<div role="main" class="ui-content">
+
+		<div id="trivia-city" class="trivia ui-content" data-role="popup" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
+        	<a href="#" data-rel="back" class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all">Close</a>
+			<p>Here some text.</p>
+        </div><!-- /popup -->
+
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<div id="_footer" data-id="footer" data-position="fixed" data-fullscreen="true" data-tap-toggle="false">
+	<div data-role="controlgroup" class="control ui-btn-left" data-type="horizontal" data-mini="true">
+    	<a href="#" class="prev ui-btn ui-btn-icon-notext ui-icon-carat-l">Previous</a>
+    	<a href="#" class="next ui-btn ui-btn-icon-notext ui-icon-carat-r">Next</a>
+    </div>
+
+	<a href="#" data-rel="popup" class="trivia-btn ui-btn ui-btn-right ui-btn-icon-left ui-icon-info ui-mini ui-corner-all">Trivia</a>
+</div><!-- /footer -->
 
 </body>
 </html>

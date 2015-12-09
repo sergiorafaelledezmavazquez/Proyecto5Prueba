@@ -3,82 +3,62 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile Demos</title>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	<title>Q&A - jQuery Mobile Demos</title>
+	<link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<script src="js/jquery.js"></script>
-	<script src="_assets/js/index.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page" class="jqm-demos jqm-home">
+<div data-role="page" class="jqm-demos">
 
 	<div data-role="header" class="jqm-header">
-		<h2><img src="_assets/img/jquery-logo.png" alt="jQuery Mobile"></h2>
-		<p>Version <span class="jqm-version"></span></p>
+		<h2><a href="../" title="jQuery Mobile Demos home"><img src="../_assets/img/jquery-logo.png" alt="jQuery Mobile"></a></h2>
+		<p><span class="jqm-version"></span> Demos</p>
 		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content jqm-content">
 
-		<h1>Demos</h1>
+		<p><strong>Note: this page has not been updated after 1.3</strong></p>
 
-		<p><strong>jQuery Mobile is a touch-optimized HTML5 UI framework designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</strong></p>
+		<h2>Question:</h2>
 
-		<img src="_assets/img/devices.png">
+		<h1>Content injected into a page is not enhanced.</h1>
 
-		<p>New to jQuery Mobile? Get started by reading this <a href="intro/" data-ajax="false">introduction</a>. For technical info, visit the <a href="http://api.jquerymobile.com" title="jQuery Mobile API documentation" target="_blank">API documentation</a>. Downloads and info about the project can be found on <a href="http://jquerymobile.com" title="jQuery Mobile web site" target="_blank">jquerymobile.com</a>.</p>
+		<h2>Answer:</h2>
 
-        <div class="ui-grid-a ui-responsive">
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Pages &amp; Navigation</h3>
+		<p>jQuery Mobile has no way to know when you have injected content into a page. To let jQuery Mobile know you have injected content that must be enhanced, you need to either make sure the plugins are called to enhance the new elements or <code>trigger("create")</code> on the parent container so you don't have to call each plugin manually.</p>
 
-        			<p><a href="pages/" data-ajax="false">Pages</a></p>
-        			<p><a href="navigation/" data-ajax="false">Navigation</a></p>
-        			<p><a href="loader/" data-ajax="false">Loader</a></p>
-        			<p><a href="transitions/" data-ajax="false">Transitions</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>CSS Framework</h3>
+		<p>The page plugin dispatches a <code>pagecreate</code> event, which most widgets use to auto-initialize themselves. As long as a widget plugin script is referenced, it will automatically enhance any instances of the widgets it finds on the page.</p>
+		<p>However, if you generate new markup client-side or load in content via Ajax and inject it into a page, you can trigger the <code>create</code> event to handle the auto-initialization for all the plugins contained within the new markup. This can be triggered on any element (even the page <code>div</code> itself), saving you the task of manually initializing each plugin (listview button, select, etc.).</p>
 
-        			<p><a href="theme-default/" data-ajax="false">Theming</a></p>
-        			<p><a href="button-markup/" data-ajax="false">Buttons</a></p>
-        			<p><a href="icons/" data-ajax="false">Icons</a></p>
-        			<p><a href="grids/" data-ajax="false">Grids</a></p>
-        			<p><a href="../body-bar-classes/" data-ajax="false">Body and bar classes</a></p>
-        		</div>
-        	</div>        	
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Widgets</h3>
+		<p>For example, if a block of HTML markup (say a login form) was loaded in through Ajax, trigger the <code>create</code> event to automatically transform all the widgets it contains inputs and buttons in this case) into the enhanced versions. The code for this scenario would be:</p>
+<pre><code>$( ...new markup that contains widgets... ).appendTo( ".ui-page" ).trigger( "create" );</code></pre>
 
-        			<p><a href="toolbar/" data-ajax="false">Toolbar</a>, <a href="navbar/" data-ajax="false">Navbar</a></p>
-        			<p><a href="tabs/" data-ajax="false">Tabs</a>, <a href="panel/" data-ajax="false">Panel</a>, <a href="popup/" data-ajax="false">Popup</a></p>
-        			<p><a href="listview/" data-ajax="false">Listview</a></p>
-        			<p><a href="collapsible/" data-ajax="false">Collapsible</a>, <a href="collapsibleset/" data-ajax="false">Collapsible set</a></p>
-        			<p><a href="table-reflow/" data-ajax="false">Table Reflow</a>, <a href="table-column-toggle/" data-ajax="false">Table Column Toggle</a></p>
-        			<p><a href="filterable/" data-ajax="false">Filterable</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>Form widgets</h3>
+			<pre><code>
+//HTML
+&#60;form id="formid"&#62;
+	&#60;input type="search" id="searchInput"/&#62;
+	&#60;button id="submitButton"&#62;Submit&#60;/button&#62;
+&#60;/form&#62;
 
-        			<p><a href="checkboxradio-checkbox/" data-ajax="false">Checkboxes</a>, <a href="checkboxradio-radio/" data-ajax="false">Radio buttons</a></p>
-        			<p><a href="selectmenu/" data-ajax="false">Selectmenu</a>, <a href="selectmenu-custom/" data-ajax="false">Custom menu</a></p>
-        			<p><a href="flipswitch/" data-ajax="false">Flipswitch</a></p>
-        			<p><a href="slider/" data-ajax="false">Slider</a>, <a href="rangeslider/" data-ajax="false">Rangeslider</a></p>
-        			<p><a href="button/" data-ajax="false">Input button</a></p>
-        			<p><a href="controlgroup/" data-ajax="false">Controlgroup</a></p>
-        		</div>
-        	</div>
-        </div>
+// JavaScript **CORRECT**
+$("#formid").trigger("create");
+
+// JavaScript INCORRECT
+$("#serchInput").trigger("create");
+$("#submitButton").trigger("create");
+			</code></pre>
+
+		<h2>Create vs. refresh: An important distinction</h2>
+		<p>Note that there is an important difference between the <code>create</code> event and <code>refresh</code> method that some widgets have. The <code>create</code> event is suited for enhancing <em>raw markup</em> that contains one or more widgets. The <code>refresh</code> method should be used on existing (already enhanced) widgets that have been manipulated programmatically and need the UI be updated to match.</p>
+
+		<p>For example, if you had a page where you dynamically appended a new unordered list with <code>data-role=listview</code> attribute after page creation, triggering <code>create</code> on a parent element of that list would transform it into a listview styled widget. If more list items were then programmatically added, calling the listview&#8217;s <code>refresh</code> method would update just those new list items to the enhanced state and leave the existing list items untouched.</p>
 
 	</div><!-- /content -->
 	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">

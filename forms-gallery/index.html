@@ -1,84 +1,425 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>jQuery Mobile Demos</title>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form gallery - jQuery Mobile Demos</title>
+    <link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+    <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<script src="js/jquery.js"></script>
-	<script src="_assets/js/index.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../_assets/js/index.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page" class="jqm-demos jqm-home">
+<div data-role="page" class="jqm-demos">
 
-	<div data-role="header" class="jqm-header">
-		<h2><img src="_assets/img/jquery-logo.png" alt="jQuery Mobile"></h2>
-		<p>Version <span class="jqm-version"></span></p>
-		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
-		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
-	</div><!-- /header -->
+    <div data-role="header" class="jqm-header">
+        <h2><a href="../" title="jQuery Mobile Demos home"><img src="../_assets/img/jquery-logo.png" alt="jQuery Mobile"></a></h2>
+		<p><span class="jqm-version"></span> Demos</p>
+        <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
+        <a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
+    </div><!-- /header -->
 
 	<div role="main" class="ui-content jqm-content">
 
-		<h1>Demos</h1>
+    	<h1>Form gallery</h1>
 
-		<p><strong>jQuery Mobile is a touch-optimized HTML5 UI framework designed to make responsive web sites and apps that are accessible on all smartphone, tablet and desktop devices.</strong></p>
+        <form action="#" method="get">
 
-		<img src="_assets/img/devices.png">
+            <div data-demo-html="true">
+                <label for="textinput-2">Text Input:</label>
+                <input type="text" name="textinput-2" id="textinput-2" placeholder="Text input" value="">
+            </div><!--/demo-html -->
 
-		<p>New to jQuery Mobile? Get started by reading this <a href="intro/" data-ajax="false">introduction</a>. For technical info, visit the <a href="http://api.jquerymobile.com" title="jQuery Mobile API documentation" target="_blank">API documentation</a>. Downloads and info about the project can be found on <a href="http://jquerymobile.com" title="jQuery Mobile web site" target="_blank">jquerymobile.com</a>.</p>
+            <div data-demo-html="true">
+                <label for="search-2">Search Input:</label>
+                <input type="search" name="search-2" id="search-2" value="">
+            </div><!--/demo-html -->
 
-        <div class="ui-grid-a ui-responsive">
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Pages &amp; Navigation</h3>
+            <div data-demo-html="true">
+                <label for="textarea-2">Textarea:</label>
+                <textarea cols="40" rows="8" name="textarea-2" id="textarea-2">Textarea</textarea>
+            </div><!--/demo-html -->
 
-        			<p><a href="pages/" data-ajax="false">Pages</a></p>
-        			<p><a href="navigation/" data-ajax="false">Navigation</a></p>
-        			<p><a href="loader/" data-ajax="false">Loader</a></p>
-        			<p><a href="transitions/" data-ajax="false">Transitions</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>CSS Framework</h3>
+            <div data-demo-html="true">
+                <label for="select-native-2">Native select:</label>
+                <select name="select-native-2" id="select-native-2">
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                </select>
+            </div><!--/demo-html -->
 
-        			<p><a href="theme-default/" data-ajax="false">Theming</a></p>
-        			<p><a href="button-markup/" data-ajax="false">Buttons</a></p>
-        			<p><a href="icons/" data-ajax="false">Icons</a></p>
-        			<p><a href="grids/" data-ajax="false">Grids</a></p>
-        			<p><a href="../body-bar-classes/" data-ajax="false">Body and bar classes</a></p>
-        		</div>
-        	</div>        	
-        	<div class="ui-block-a">
-        		<div class="jqm-block-content">
-        			<h3>Widgets</h3>
+            <div data-demo-html="true">
+                <label for="select-multiple-2">Custom multiple select:</label>
+                <select multiple="multiple" data-native-menu="false" name="select-multiple-2" id="select-multiple-2">
+                    <option value="">Choices:</option>
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                </select>
+            </div><!--/demo-html -->
 
-        			<p><a href="toolbar/" data-ajax="false">Toolbar</a>, <a href="navbar/" data-ajax="false">Navbar</a></p>
-        			<p><a href="tabs/" data-ajax="false">Tabs</a>, <a href="panel/" data-ajax="false">Panel</a>, <a href="popup/" data-ajax="false">Popup</a></p>
-        			<p><a href="listview/" data-ajax="false">Listview</a></p>
-        			<p><a href="collapsible/" data-ajax="false">Collapsible</a>, <a href="collapsibleset/" data-ajax="false">Collapsible set</a></p>
-        			<p><a href="table-reflow/" data-ajax="false">Table Reflow</a>, <a href="table-column-toggle/" data-ajax="false">Table Column Toggle</a></p>
-        			<p><a href="filterable/" data-ajax="false">Filterable</a></p>
-        		</div>
-        	</div>
-        	<div class="ui-block-b">
-        		<div class="jqm-block-content">
-        			<h3>Form widgets</h3>
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup">
+                    <legend>Vertical controlgroup, buttons:</legend>
+                    <button class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-right">One</button>
+                    <input type="button" data-icon="back" data-iconpos="right" value="Two">
+                    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-right">Three</a>
+                </fieldset>
+            </div><!--/demo-html -->
 
-        			<p><a href="checkboxradio-checkbox/" data-ajax="false">Checkboxes</a>, <a href="checkboxradio-radio/" data-ajax="false">Radio buttons</a></p>
-        			<p><a href="selectmenu/" data-ajax="false">Selectmenu</a>, <a href="selectmenu-custom/" data-ajax="false">Custom menu</a></p>
-        			<p><a href="flipswitch/" data-ajax="false">Flipswitch</a></p>
-        			<p><a href="slider/" data-ajax="false">Slider</a>, <a href="rangeslider/" data-ajax="false">Rangeslider</a></p>
-        			<p><a href="button/" data-ajax="false">Input button</a></p>
-        			<p><a href="controlgroup/" data-ajax="false">Controlgroup</a></p>
-        		</div>
-        	</div>
-        </div>
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Horizontal controlgroup, buttons:</legend>
+                    <button class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-right">One</button>
+                    <input type="button" data-icon="back" data-iconpos="right" value="Two">
+                    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-right">Three</a>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup">
+                    <legend>Vertical controlgroup, select:</legend>
+                    <label for="select-v-2a">Select A</label>
+                    <select name="select-v-2a" id="select-v-2a">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-v-2b">Select B</label>
+                    <select name="select-v-2b" id="select-v-2b">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-v-2c">Select C</label>
+                    <select name="select-v-2c" id="select-v-2c">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Horizontal controlgroup, select:</legend>
+                    <label for="select-h-2a">Select A</label>
+                    <select name="select-h-2a" id="select-h-2a">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-h-2b">Select B</label>
+                    <select name="select-h-2b" id="select-h-2b">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-h-2c">Select C</label>
+                    <select name="select-h-2c" id="select-h-2c">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Horizontal controlgroup, mixed:</legend>
+                    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-right">Link</a>
+                    <button class="ui-btn ui-shadow ui-corner-all ui-icon-grid ui-btn-icon-notext">Button</button>
+                    <label for="select-v-2e">Select</label>
+                    <select name="select-v-2e" id="select-v-2e">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="slider-2">Slider:</label>
+                <input type="range" name="slider-2" id="slider-2" value="50" min="0" max="100" data-highlight="true">
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+            <div data-role="rangeslider">
+                <label for="range-1a">Rangeslider:</label>
+                <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40">
+                <label for="range-1b">Rangeslider:</label>
+                <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+            </div>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="flip-2">Flip toggle:</label>
+                <select name="flip-2" id="flip-2" data-role="slider">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup">
+                    <legend>Single checkbox:</legend>
+                    <label for="checkbox-2">I agree</label>
+                    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup">
+                    <legend>Vertical controlgroup, checkbox:</legend>
+                    <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+                    <label for="checkbox-v-2a">One</label>
+                    <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+                    <label for="checkbox-v-2b">Two</label>
+                    <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+                    <label for="checkbox-v-2c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup">
+                    <legend>Vertical controlgroup, radio:</legend>
+                    <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="on" checked="checked">
+                    <label for="radio-choice-v-2a">One</label>
+                    <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="off">
+                    <label for="radio-choice-v-2b">Two</label>
+                    <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="other">
+                    <label for="radio-choice-v-2c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Horizontal controlgroup, checkbox:</legend>
+                    <input type="checkbox" name="checkbox-h-2a" id="checkbox-h-2a">
+                    <label for="checkbox-h-2a">One</label>
+                    <input type="checkbox" name="checkbox-h-2b" id="checkbox-h-2b">
+                    <label for="checkbox-h-2b">Two</label>
+                    <input type="checkbox" name="checkbox-h-2c" id="checkbox-h-2c">
+                    <label for="checkbox-h-2c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Horizontal controlgroup, radio:</legend>
+                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="on" checked="checked">
+                    <label for="radio-choice-h-2a">One</label>
+                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off">
+                    <label for="radio-choice-h-2b">Two</label>
+                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2c" value="other">
+                    <label for="radio-choice-h-2c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="submit-2">Send:</label>
+                <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-2">Submit</button>
+            </div><!--/demo-html -->
+
+        </form>
+
+        <h2>Mini sized</h2>
+
+        <form action="#" method="get">
+
+            <div data-demo-html="true">
+                <label for="textinput-6">Text Input:</label>
+                <input type="text" name="textinput-6" id="textinput-6" placeholder="Text input" value="" data-mini="true">
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="search-6">Search Input:</label>
+                <input type="search" name="search-6" id="search-6" value="" data-mini="true">
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="textarea-6">Textarea:</label>
+                <textarea cols="40" rows="8" name="textarea-6" id="textarea-6" data-mini="true">Textarea</textarea>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="select-native-6">Native select:</label>
+                <select name="select-native-6" id="select-native-6" data-mini="true">
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                </select>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="select-multiple-6">Custom multiple select:</label>
+                <select multiple="multiple" data-native-menu="false" name="select-multiple-6" id="select-multiple-6" data-mini="true">
+                    <option value="">Choices:</option>
+                    <option value="small">One</option>
+                    <option value="medium">Two</option>
+                    <option value="large">Three</option>
+                </select>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>Vertical controlgroup, buttons:</legend>
+                    <button class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-right">One</button>
+                    <input type="button" data-icon="back" data-iconpos="right" value="Two">
+                    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-right">Three</a>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Horizontal controlgroup, buttons:</legend>
+                    <button class="ui-shadow ui-btn ui-corner-all ui-icon-home ui-btn-icon-right">One</button>
+                    <input type="button" data-icon="back" data-iconpos="right" value="Two">
+                    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-right">Three</a>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>Vertical controlgroup, select:</legend>
+                    <label for="select-v-6a">Select A</label>
+                    <select name="select-v-6a" id="select-v-6a">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-v-6b">Select B</label>
+                    <select name="select-v-6b" id="select-v-6b">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-v-6c">Select C</label>
+                    <select name="select-v-6c" id="select-v-6c">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Horizontal controlgroup, select:</legend>
+                    <label for="select-h-6a">Select A</label>
+                    <select name="select-h-6a" id="select-h-6a">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-h-6b">Select B</label>
+                    <select name="select-h-6b" id="select-h-6b">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                    <label for="select-h-6c">Select C</label>
+                    <select name="select-h-6c" id="select-h-6c">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Horizontal controlgroup, mixed:</legend>
+                    <a href="#" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-right">Link</a>
+                    <button class="ui-shadow ui-btn ui-corner-all ui-icon-grid ui-btn-icon-notext">Button</button>
+                    <label for="select-v-6e">Select</label>
+                    <select name="select-v-6e" id="select-v-6e">
+                        <option value="#">One</option>
+                        <option value="#">Two</option>
+                        <option value="#">Three</option>
+                    </select>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="slider-6">Slider:</label>
+                <input type="range" name="slider-6" id="slider-6" value="50" min="0" max="100" data-highlight="true" data-mini="true">
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="flip-6">Flip toggle:</label>
+                <select name="flip-6" id="flip-6" data-role="slider" data-mini="true">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>Single checkbox:</legend>
+                    <label for="checkbox-6">I agree</label>
+                    <input type="checkbox" name="checkbox-6" id="checkbox-6">
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>Vertical controlgroup, checkbox:</legend>
+                    <input type="checkbox" name="checkbox-v-6a" id="checkbox-v-6a">
+                    <label for="checkbox-v-6a">One</label>
+                    <input type="checkbox" name="checkbox-v-6b" id="checkbox-v-6b">
+                    <label for="checkbox-v-6b">Two</label>
+                    <input type="checkbox" name="checkbox-v-6c" id="checkbox-v-6c">
+                    <label for="checkbox-v-6c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-mini="true">
+                    <legend>Vertical controlgroup, radio:</legend>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6a" value="on" checked="checked">
+                    <label for="radio-choice-v-6a">One</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6b" value="off">
+                    <label for="radio-choice-v-6b">Two</label>
+                    <input type="radio" name="radio-choice-v-6" id="radio-choice-v-6c" value="other">
+                    <label for="radio-choice-v-6c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Horizontal controlgroup, checkbox:</legend>
+                    <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+                    <label for="checkbox-h-6a">One</label>
+                    <input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+                    <label for="checkbox-h-6b">Two</label>
+                    <input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+                    <label for="checkbox-h-6c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Horizontal controlgroup, radio:</legend>
+                    <input type="radio" name="radio-choice-h-6" id="radio-choice-h-6a" value="on" checked="checked">
+                    <label for="radio-choice-h-6a">One</label>
+                    <input type="radio" name="radio-choice-h-6" id="radio-choice-h-6b" value="off">
+                    <label for="radio-choice-h-6b">Two</label>
+                    <input type="radio" name="radio-choice-h-6" id="radio-choice-h-6c" value="other">
+                    <label for="radio-choice-h-6c">Three</label>
+                </fieldset>
+            </div><!--/demo-html -->
+
+            <div data-demo-html="true">
+                <label for="submit-6">Send:</label>
+                <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Submit</button>
+            </div><!--/demo-html -->
+
+        </form>
 
 	</div><!-- /content -->
 	    <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" data-theme="a">
